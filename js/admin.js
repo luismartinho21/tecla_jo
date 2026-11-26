@@ -95,7 +95,7 @@
         <div class="img-preview-row">
           ${preview ? `<img class="img-thumb" src="${escapeHtml(preview)}" alt="Pré-visualização" />` : `<div class="img-thumb"></div>`}
           <label class="btn btn-outline btn-sm" style="flex-direction:row;cursor:pointer;">
-            📤 Carregar imagem
+            Carregar imagem
             <input type="file" accept="image/*" data-upload-path="${escapeHtml(path)}" style="display:none;" />
           </label>
           ${val ? `<button type="button" class="btn btn-danger btn-sm" data-clear-path="${escapeHtml(path)}">Remover</button>` : ""}
@@ -614,10 +614,10 @@
         <section class="card stack">
           <h3>Publicação &amp; Backup</h3>
           <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
-            <button type="button" class="btn btn-primary" id="exportJsBtn">🚀 Descarregar default-data.js (Publicar)</button>
-            <button type="button" class="btn btn-outline" id="exportJsonBtn">📦 Exportar Backup (.json)</button>
+            <button type="button" class="btn btn-primary" id="exportJsBtn">Descarregar default-data.js (Publicar)</button>
+            <button type="button" class="btn btn-outline" id="exportJsonBtn">Exportar Backup (.json)</button>
             <label class="btn btn-outline" style="flex-direction:row;cursor:pointer;">
-              📥 Importar Backup (.json)
+              Importar Backup (.json)
               <input type="file" accept="application/json,.json" id="importJsonInput" style="display:none;" />
             </label>
           </div>
@@ -630,7 +630,7 @@
             <label>Confirmar Nova Palavra-passe<input type="password" id="newPass2" placeholder="Repetir palavra-passe" /></label>
           </div>
           <div>
-            <button type="button" class="btn btn-outline" id="changePassBtn">🔐 Atualizar Palavra-passe</button>
+            <button type="button" class="btn btn-outline" id="changePassBtn">Atualizar Palavra-passe</button>
           </div>
         </section>
 
@@ -638,7 +638,7 @@
           <h3>Repor Dados de Fábrica</h3>
           <p class="muted">Apaga as edições guardadas neste navegador e repõe os dados originais de <code>js/default-data.js</code>.</p>
           <div>
-            <button type="button" class="btn btn-danger" id="resetBtn">♻️ Repor Dados Originais</button>
+            <button type="button" class="btn btn-danger" id="resetBtn">Repor Dados Originais</button>
           </div>
         </section>`;
     }
@@ -652,17 +652,17 @@
       case "hero.stats":
         return { value: "Novo", label: "Descrição curta" };
       case "hero.pillars":
-        return { icon: "⚡", title: "Novo Pilar", description: "Descrição breve.", linkText: "Ver mais", linkHref: "#catalogo" };
+        return { icon: "", title: "Novo Pilar", description: "Descrição breve.", linkText: "Ver mais", linkHref: "#catalogo" };
       case "catalog.items":
         return { id, ref: "TEC-NEW-01", category: "Computadores & Portáteis", badge: "Novo", title: "Novo Produto", description: "Descrição do produto.", price: "Sob consulta", imageUrl: "assets/prod-laptop.svg" };
       case "repairs.services":
-        return { id, icon: "🔧", title: "Novo Serviço de Reparação", description: "Descrição do serviço.", eta: "Orçamento rápido" };
+        return { id, icon: "", title: "Novo Serviço de Reparação", description: "Descrição do serviço.", eta: "Orçamento rápido" };
       case "business.highlights":
-        return { id, icon: "💼", title: "Nova Solução B2B", description: "Descrição da solução empresarial." };
+        return { id, icon: "", title: "Nova Solução B2B", description: "Descrição da solução empresarial." };
       case "gallery.items":
         return { id, title: "Nova Fotografia", category: "Loja", imageUrl: "assets/gallery-1.svg" };
       case "about.values":
-        return { icon: "✅", title: "Novo Valor", description: "Descrição do valor." };
+        return { icon: "", title: "Novo Valor", description: "Descrição do valor." };
       case "team.members":
         return { id, name: "Novo Membro", role: "Função", bio: "Breve apresentação.", photoUrl: "assets/avatar-1.svg" };
       case "testimonials.items":

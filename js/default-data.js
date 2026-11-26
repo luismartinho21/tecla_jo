@@ -71,21 +71,21 @@ window.DEFAULT_SITE_DATA = {
     ],
     pillars: [
       {
-        icon: "🎮",
+        icon: "",
         title: "Loja & Mundo Gaming",
         description: "Telemóveis novos e recondicionados, portáteis, PCs gaming por medida, impressoras, tinteiros e toners.",
         linkText: "Explorar catálogo",
         linkHref: "#catalogo"
       },
       {
-        icon: "🛠️",
+        icon: "",
         title: "Assistência Técnica",
         description: "Reparação de computadores, smartphones e periféricos. Ecrãs, baterias, limpeza térmica e recuperação de dados.",
         linkText: "Pedir orçamento",
         linkHref: "#reparacoes"
       },
       {
-        icon: "💼",
+        icon: "",
         title: "Empresas & Software",
         description: "Software de gestão e faturação certificada (XD), sistemas POS para restauração e retalho, redes e formação.",
         linkText: "Ver soluções B2B",
@@ -167,42 +167,42 @@ window.DEFAULT_SITE_DATA = {
     services: [
       {
         id: "rep-1",
-        icon: "📱",
+        icon: "",
         title: "Substituição de Ecrãs & Baterias",
         description: "Troca rápida de ecrãs partidos, baterias viciadas, conectores de carga e câmaras em smartphones e tablets.",
         eta: "No próprio dia / 24h"
       },
       {
         id: "rep-2",
-        icon: "❄️",
+        icon: "",
         title: "Limpeza Interna & Massa Térmica",
         description: "Elimine sobreaquecimento e ruído excessivo em portáteis, desktops e consolas prolongando a vida útil.",
         eta: "Serviço preventivo"
       },
       {
         id: "rep-3",
-        icon: "💾",
+        icon: "",
         title: "Formatação, Upgrades SSD & Dados",
         description: "Dê nova vida ao seu computador lento com SSD/RAM, reinstalação limpa e recuperação de ficheiros importantes.",
         eta: "Diagnóstico na hora"
       },
       {
         id: "rep-4",
-        icon: "🖥️",
+        icon: "",
         title: "Montagem de PCs por Medida",
         description: "Configuração e montagem de PCs Gaming, estações de trabalho e edição de vídeo ajustados ao seu orçamento.",
         eta: "Aconselhamento incluído"
       },
       {
         id: "rep-5",
-        icon: "🛡️",
+        icon: "",
         title: "Remoção de Vírus & Segurança",
         description: "Limpeza de malware, proteção antivírus, backups automáticos e configuração de e-mail e cloud.",
         eta: "Proteção total"
       },
       {
         id: "rep-6",
-        icon: "🖨️",
+        icon: "",
         title: "Impressoras & Periféricos",
         description: "Manutenção de impressoras, configuração em rede Wi-Fi e resolução de falhas de hardware.",
         eta: "Particulares e empresas"
@@ -218,25 +218,25 @@ window.DEFAULT_SITE_DATA = {
     highlights: [
       {
         id: "biz-1",
-        icon: "🧾",
+        icon: "",
         title: "Software de Gestão & Faturação XD",
         description: "Implementação, migração de dados, ligação à Autoridade Tributária (AT), SAF-T e faturação eletrónica."
       },
       {
         id: "biz-2",
-        icon: "🍽️",
+        icon: "",
         title: "Pontos de Venda (POS) Retalho & Restauração",
         description: "Ecrãs táteis, gavetas, impressoras térmicas, comandas móveis e controlo de mesas e stocks."
       },
       {
         id: "biz-3",
-        icon: "🌐",
+        icon: "",
         title: "Redes, Servidores & Manutenção",
         description: "Redes estruturadas, Wi-Fi profissional, backups seguros e contratos de assistência informática prioritária."
       },
       {
         id: "biz-4",
-        icon: "🎓",
+        icon: "",
         title: "Consultoria & Formação",
         description: "Acompanhamento próximo na digitalização do negócio e formação prática para a sua equipa."
       }
@@ -280,17 +280,17 @@ window.DEFAULT_SITE_DATA = {
     imageUrl: "assets/about-img.svg",
     values: [
       {
-        icon: "⚡",
+        icon: "",
         title: "Rapidez & Rigor",
         description: "Sabemos que hoje ninguém pode ficar sem computador ou telemóvel. Damos prioridade a respostas rápidas."
       },
       {
-        icon: "🤝",
+        icon: "",
         title: "Atendimento Próximo",
         description: "Explicamos sem linguagem complicada e aconselhamos apenas o que faz realmente sentido para si."
       },
       {
-        icon: "✅",
+        icon: "",
         title: "Garantia & Confiança",
         description: "Equipamentos verificados, peças de qualidade e acompanhamento pós-venda real na loja."
       }

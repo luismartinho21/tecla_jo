@@ -49,13 +49,13 @@
     const b = data.brand || {};
     document.title = `${b.name || "Tecla - Informática"} | ${b.tagline || "Póvoa de Lanhoso"}`;
 
-    setText("topBarLocation", `📍 ${b.topBarLocation || data.contact?.address || ""}`);
-    setText("topBarHours", `🕒 ${b.topBarHours || ""}`);
+    setText("topBarLocation", b.topBarLocation || data.contact?.address || "");
+    setText("topBarHours", b.topBarHours || "");
 
     const phone = data.contact?.phone || "";
     const topPhone = document.getElementById("topBarPhone");
     if (topPhone && phone) {
-      topPhone.textContent = `📞 ${phone}`;
+      topPhone.textContent = phone;
       topPhone.href = `tel:${phone.replace(/\s+/g, "")}`;
     }
 
@@ -155,7 +155,7 @@
         .map(
           (p) => `
           <article class="pillar-card">
-            <div class="pillar-icon">${escapeHtml(p.icon || "💻")}</div>
+            ${p.icon ? `<div class="pillar-icon">${escapeHtml(p.icon)}</div>` : ""}
             <h3>${escapeHtml(p.title)}</h3>
             <p>${escapeHtml(p.description)}</p>
             <a class="pillar-link" href="${escapeHtml(p.linkHref || "#catalogo")}">${escapeHtml(p.linkText || "Saber mais")} →</a>
@@ -246,7 +246,7 @@
         .map(
           (s) => `
           <article class="repair-card">
-            <div class="repair-icon">${escapeHtml(s.icon || "🛠️")}</div>
+            ${s.icon ? `<div class="repair-icon">${escapeHtml(s.icon)}</div>` : ""}
             <h3>${escapeHtml(s.title)}</h3>
             <p>${escapeHtml(s.description)}</p>
             ${s.eta ? `<span class="repair-eta">${escapeHtml(s.eta)}</span>` : ""}
@@ -274,7 +274,7 @@
         .map(
           (h) => `
           <article class="business-card">
-            <div class="b-icon">${escapeHtml(h.icon || "💼")}</div>
+            ${h.icon ? `<div class="b-icon">${escapeHtml(h.icon)}</div>` : ""}
             <h3>${escapeHtml(h.title)}</h3>
             <p>${escapeHtml(h.description)}</p>
           </article>`
@@ -342,7 +342,7 @@
         .map(
           (v) => `
           <div class="value-card">
-            <span>${escapeHtml(v.icon || "✅")}</span>
+            ${v.icon ? `<span>${escapeHtml(v.icon)}</span>` : ""}
             <h4>${escapeHtml(v.title)}</h4>
             <p>${escapeHtml(v.description)}</p>
           </div>`
@@ -455,21 +455,19 @@
     const listEl = document.getElementById("contactList");
     if (listEl) {
       const rows = [
-        { icon: "📍", label: "Morada", html: `<strong>${escapeHtml(c.address || "")}</strong>` },
+        { label: "Morada", html: `<strong>${escapeHtml(c.address || "")}</strong>` },
         {
-          icon: "📞",
           label: "Telefone",
           html: c.phone ? `<a href="tel:${escapeHtml(c.phone.replace(/\s+/g, ""))}">${escapeHtml(c.phone)}</a>` : ""
         },
         {
-          icon: "✉️",
           label: "E-mail",
           html: c.email ? `<a href="mailto:${escapeHtml(c.email)}">${escapeHtml(c.email)}</a>` : ""
         }
       ].filter((r) => r.html);
 
       listEl.innerHTML = rows
-        .map((r) => `<div class="contact-row"><span>${r.icon}</span><div><small>${r.label}</small>${r.html}</div></div>`)
+        .map((r) => `<div class="contact-row"><div><small>${r.label}</small>${r.html}</div></div>`)
         .join("");
     }
 
@@ -483,10 +481,10 @@
     const socialEl = document.getElementById("contactSocials");
     if (socialEl) {
       const chips = [];
-      if (social.facebook) chips.push(`<a class="social-chip" href="${escapeHtml(social.facebook)}" target="_blank" rel="noopener">📘 Facebook (Tecla)</a>`);
-      if (social.facebookBusiness) chips.push(`<a class="social-chip" href="${escapeHtml(social.facebookBusiness)}" target="_blank" rel="noopener">🏢 Facebook (Tecla JO)</a>`);
-      if (social.instagram) chips.push(`<a class="social-chip" href="${escapeHtml(social.instagram)}" target="_blank" rel="noopener">📸 Instagram</a>`);
-      if (social.whatsapp) chips.push(`<a class="social-chip" href="${buildWhatsAppUrl("Olá Tecla - Informática!")}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
+      if (social.facebook) chips.push(`<a class="social-chip" href="${escapeHtml(social.facebook)}" target="_blank" rel="noopener">Facebook (Tecla)</a>`);
+      if (social.facebookBusiness) chips.push(`<a class="social-chip" href="${escapeHtml(social.facebookBusiness)}" target="_blank" rel="noopener">Facebook (Tecla JO)</a>`);
+      if (social.instagram) chips.push(`<a class="social-chip" href="${escapeHtml(social.instagram)}" target="_blank" rel="noopener">Instagram</a>`);
+      if (social.whatsapp) chips.push(`<a class="social-chip" href="${buildWhatsAppUrl("Olá Tecla - Informática!")}" target="_blank" rel="noopener">WhatsApp</a>`);
       socialEl.innerHTML = chips.join("");
     }
 

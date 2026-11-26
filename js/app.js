@@ -96,7 +96,13 @@
     // Footer
     setText("footerBrandName", b.name);
     setText("footerText", b.footerText);
-    setText("footerCopyright", b.copyright);
+    const copyEl = document.getElementById("footerCopyright");
+    if (copyEl) {
+      const creditHtml = b.creditLabel
+        ? ` <a class="footer-credit-link" href="${escapeHtml(b.creditUrl || "https://lumar.email")}" target="_blank" rel="noopener">${escapeHtml(b.creditLabel)}</a>`
+        : "";
+      copyEl.innerHTML = `${escapeHtml(b.copyright || "© 2026 Direitos reservados —")}${creditHtml}`;
+    }
     const compLink = document.getElementById("footerComplaintsLink");
     if (compLink && b.legal?.complaintsBookUrl) compLink.href = b.legal.complaintsBookUrl;
 

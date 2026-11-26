@@ -27,7 +27,9 @@ window.DEFAULT_SITE_DATA = {
     topBarLocation: "Rua Neuves Maisons, n.º 49 · Póvoa de Lanhoso",
     topBarHours: "Seg–Sex: 09:00–19:00 | Sáb: 09:30–13:00",
     footerText: "Tecla Precisa — Informática e Programação, Lda. Loja de informática, reparações técnicas, mundo gaming e soluções empresariais na Póvoa de Lanhoso.",
-    copyright: "© 2026 Tecla - Informática (Tecla JO / Tecla Precisa). Todos os direitos reservados.",
+    copyright: "© 2026 Direitos reservados —",
+    creditLabel: "lumar.email",
+    creditUrl: "https://lumar.email",
     social: {
       facebook: "https://www.facebook.com/infotecla/?locale=pt_PT",
       facebookBusiness: "https://www.facebook.com/teclaprecisa/?locale=pt_PT",

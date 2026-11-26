@@ -162,6 +162,10 @@
           <h3>Rodapé &amp; Informação Legal (Portugal)</h3>
           ${inputHtml("Descrição do Rodapé", "brand.footerText", "textarea")}
           ${inputHtml("Texto de Copyright", "brand.copyright")}
+          <div class="grid-2">
+            ${inputHtml("Crédito / Autor (Texto do Link)", "brand.creditLabel")}
+            ${inputHtml("Crédito / Autor (URL)", "brand.creditUrl", "url")}
+          </div>
           ${inputHtml("Link Livro de Reclamações Eletrónico", "brand.legal.complaintsBookUrl", "url")}
           ${inputHtml("Texto Resolução Alternativa de Litígios (RAL)", "brand.legal.ralText", "textarea")}
           ${inputHtml("Texto Política de Privacidade (RGPD)", "brand.legal.privacyText", "textarea")}

@@ -955,6 +955,14 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
+.footer-credit-link {
+  color: #e2e8f0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-credit-link:hover { color: var(--accent); }
+
 .admin-entry {
   padding: 0.35rem 0.8rem;
   border-radius: 999px;

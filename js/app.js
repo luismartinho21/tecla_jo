@@ -384,10 +384,10 @@
 
     gridEl.innerHTML = (t.items || [])
       .map((item) => {
-        const stars = "★".repeat(Math.max(1, Math.min(5, Number(item.rating) || 5)));
+        const ratingVal = Math.max(1, Math.min(5, Number(item.rating) || 5));
         return `
         <article class="testimonial-card">
-          <div class="stars" aria-label="${item.rating} estrelas">${stars}</div>
+          <div class="stars" aria-label="${ratingVal} em 5">Avaliação ${ratingVal}/5</div>
           <blockquote>“${escapeHtml(item.text)}”</blockquote>
           <div class="testimonial-author">
             <strong>${escapeHtml(item.name)}</strong>

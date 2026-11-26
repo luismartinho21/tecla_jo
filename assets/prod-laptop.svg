@@ -6,9 +6,11 @@
     </linearGradient>
   </defs>
   <rect width="800" height="560" fill="url(#p2)"/>
-  <rect x="195" y="110" width="410" height="260" rx="18" fill="#0f172a"/>
-  <rect x="213" y="128" width="374" height="224" rx="8" fill="#1d4ed8"/>
-  <path d="M140 382 H660 L690 412 H110 Z" fill="#334155"/>
-  <text x="400" y="255" font-size="60" text-anchor="middle">💻</text>
-  <text x="400" y="495" font-family="sans-serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">Portáteis &amp; Computadores</text>
+  <rect x="195" y="105" width="410" height="260" rx="16" fill="#0f172a"/>
+  <rect x="213" y="123" width="374" height="224" rx="8" fill="#005bb5"/>
+  <rect x="245" y="160" width="160" height="14" rx="7" fill="#ffffff" opacity="0.32"/>
+  <rect x="245" y="188" width="240" height="10" rx="5" fill="#ffffff" opacity="0.2"/>
+  <rect x="245" y="220" width="310" height="90" rx="10" fill="#ffffff" opacity="0.12"/>
+  <path d="M140 378 H660 L690 408 H110 Z" fill="#334155"/>
+  <text x="400" y="492" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">Portáteis &amp; Computadores</text>
 </svg>

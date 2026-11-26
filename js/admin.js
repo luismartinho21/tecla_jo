@@ -252,10 +252,7 @@
                 <strong>Pilar #${i + 1}</strong>
                 ${arrayControlsHtml("hero.pillars", i, pillars.length)}
               </div>
-              <div class="grid-2">
-                ${inputHtml("Ícone (emoji)", `hero.pillars.${i}.icon`)}
-                ${inputHtml("Título", `hero.pillars.${i}.title`)}
-              </div>
+              ${inputHtml("Título", `hero.pillars.${i}.title`)}
               ${inputHtml("Descrição", `hero.pillars.${i}.description`, "textarea")}
               <div class="grid-2">
                 ${inputHtml("Texto do Link", `hero.pillars.${i}.linkText`)}
@@ -330,8 +327,7 @@
                 <strong>${escapeHtml(s.title || `Serviço #${i + 1}`)}</strong>
                 ${arrayControlsHtml("repairs.services", i, items.length)}
               </div>
-              <div class="grid-3">
-                ${inputHtml("Ícone (emoji)", `repairs.services.${i}.icon`)}
+              <div class="grid-2">
                 ${inputHtml("Título", `repairs.services.${i}.title`)}
                 ${inputHtml("Prazo / Nota", `repairs.services.${i}.eta`)}
               </div>
@@ -369,10 +365,7 @@
                 <strong>${escapeHtml(h.title || `Solução #${i + 1}`)}</strong>
                 ${arrayControlsHtml("business.highlights", i, items.length)}
               </div>
-              <div class="grid-2">
-                ${inputHtml("Ícone (emoji)", `business.highlights.${i}.icon`)}
-                ${inputHtml("Título", `business.highlights.${i}.title`)}
-              </div>
+              ${inputHtml("Título", `business.highlights.${i}.title`)}
               ${inputHtml("Descrição", `business.highlights.${i}.description`, "textarea")}
             </div>`
             )
@@ -438,10 +431,7 @@
                 <strong>${escapeHtml(v.title || `Valor #${i + 1}`)}</strong>
                 ${arrayControlsHtml("about.values", i, vals.length)}
               </div>
-              <div class="grid-2">
-                ${inputHtml("Ícone (emoji)", `about.values.${i}.icon`)}
-                ${inputHtml("Título", `about.values.${i}.title`)}
-              </div>
+              ${inputHtml("Título", `about.values.${i}.title`)}
               ${inputHtml("Descrição", `about.values.${i}.description`, "textarea")}
             </div>`
             )

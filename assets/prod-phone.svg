@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+  <defs>
+    <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#p1)"/>
+  <circle cx="580" cy="140" r="110" fill="#38bdf8" opacity="0.22"/>
+  <rect x="300" y="75" width="200" height="390" rx="34" fill="#0f172a"/>
+  <rect x="314" y="92" width="172" height="356" rx="24" fill="#1e3a8a"/>
+  <rect x="368" y="102" width="64" height="14" rx="7" fill="#0f172a"/>
+  <circle cx="400" cy="255" r="48" fill="#38bdf8" opacity="0.25"/>
+  <text x="400" y="272" font-size="52" text-anchor="middle">📱</text>
+  <text x="400" y="512" font-family="sans-serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">Smartphones Novos &amp; Recondicionados</text>
+</svg>

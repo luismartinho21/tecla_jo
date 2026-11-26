@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f7f0e6"/>
+  <circle cx="220" cy="180" r="110" fill="#c97a32" opacity="0.16"/>
+  <circle cx="590" cy="430" r="130" fill="#1f5c47" opacity="0.12"/>
+  <rect x="160" y="150" width="480" height="300" rx="20" fill="#ffffff"/>
+  <text x="400" y="285" font-size="68" text-anchor="middle">🧺</text>
+  <text x="400" y="365" font-family="sans-serif" font-size="25" font-weight="700" fill="#8b4d18" text-anchor="middle">Produtos da Nossa Terra</text>
+</svg>

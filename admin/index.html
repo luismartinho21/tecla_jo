@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Administração | Tecla - Informática</title>
+  <link rel="icon" type="image/png" href="../assets/icon-tecla.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <!-- Ecrã de Login -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <img class="login-logo-img" src="../assets/icon-tecla.png" alt="Tecla - Informática" />
+      <h1>Painel de Administração</h1>
+      <p class="muted">Tecla - Informática (Tecla JO / Tecla Precisa)</p>
+      <form id="loginForm" class="stack">
+        <label>
+          Palavra-passe de acesso
+          <input type="password" id="loginPassword" placeholder="Introduza a palavra-passe" required autofocus />
+        </label>
+        <p class="error-msg hidden" id="loginError">Palavra-passe incorreta. Tente novamente.</p>
+        <button type="submit" class="btn btn-primary btn-full">Entrar no Painel</button>
+      </form>
+      <div class="login-hint">
+        Palavra-passe inicial: <code>admin123</code> (pode alterar depois em <strong>Publicar &amp; Backup</strong>).
+      </div>
+      <a href="../index.html" class="back-link">← Voltar ao site público</a>
+    </div>
+  </div>
+
+  <!-- Aplicação Admin -->
+  <div class="admin-app hidden" id="adminApp">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <img class="sidebar-logo-img" src="../assets/icon-tecla.png" alt="Tecla" />
+        <div>
+          <strong>Tecla Admin</strong>
+          <small>Gestor de Conteúdos</small>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebarNav">
+        <button type="button" data-tab="brand" class="active">🎨 Identidade, Cores &amp; Legal</button>
+        <button type="button" data-tab="visibility">👁️ Secções Ativas</button>
+        <button type="button" data-tab="hero">🚀 Início (Hero) &amp; Pilares</button>
+        <button type="button" data-tab="catalog">🛒 Catálogo &amp; Produtos</button>
+        <button type="button" data-tab="repairs">🛠️ Assistência &amp; Reparações</button>
+        <button type="button" data-tab="business">💼 Empresas &amp; Software</button>
+        <button type="button" data-tab="gallery">🖼️ Galeria</button>
+        <button type="button" data-tab="about">🏢 Sobre Nós</button>
+        <button type="button" data-tab="team">👥 Equipa</button>
+        <button type="button" data-tab="testimonials">⭐ Testemunhos</button>
+        <button type="button" data-tab="news">📰 Novidades</button>
+        <button type="button" data-tab="contact">📍 Contactos &amp; Horários</button>
+        <button type="button" data-tab="publish">☁️ Publicar &amp; Backup</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="../index.html" target="_blank" class="btn btn-outline btn-full">🌐 Abrir Site Público</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button type="button" class="btn btn-outline btn-sm mobile-only" id="sidebarToggle">☰ Menu</button>
+          <div>
+            <h2 id="panelTitle">Identidade, Cores &amp; Legal</h2>
+            <span class="save-status" id="saveStatus">Sem alterações pendentes</span>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-primary" id="saveBtn">💾 Guardar Alterações</button>
+          <button type="button" class="btn btn-outline" id="logoutBtn">Sair</button>
+        </div>
+      </header>
+
+      <main class="panel-body" id="panelBody"></main>
+    </div>
+  </div>
+
+  <div class="toast hidden" id="toast"></div>
+
+  <script src="../js/default-data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

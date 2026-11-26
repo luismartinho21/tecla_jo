@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tecla - Informática | Póvoa de Lanhoso</title>
+  <link id="siteFavicon" rel="icon" type="image/png" href="assets/icon-tecla.png" />
+  <link rel="apple-touch-icon" href="assets/icon-tecla.png" />
+  <meta name="description" content="Tecla - Informática (Tecla JO / Tecla Precisa) na Póvoa de Lanhoso. Computadores, telemóveis novos e recondicionados, setups gaming, assistência técnica e software de faturação XD." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Barra de Topo -->
+  <div class="top-bar" id="topBar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span id="topBarLocation">📍 Rua Neuves Maisons, n.º 49 · Póvoa de Lanhoso</span>
+        <span class="sep">|</span>
+        <span id="topBarHours">🕒 Seg–Sex: 09:00–19:00 | Sáb: 09:30–13:00</span>
+      </div>
+      <div class="top-bar-right">
+        <a id="topBarPhone" href="tel:+351253067976">📞 +351 253 067 976</a>
+        <a id="topBarWhatsapp" href="#contactos" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-link" aria-label="Início">
+        <span class="brand-mark" id="brandMark">TI</span>
+        <img class="brand-logo hidden" id="brandLogo" alt="Logótipo" />
+        <span class="brand-text">
+          <strong id="brandName">Tecla - Informática</strong>
+          <small id="brandSub">Tecla JO · Tecla Precisa</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#inicio" data-nav="hero">Início</a>
+        <a href="#catalogo" data-nav="catalog">Catálogo</a>
+        <a href="#reparacoes" data-nav="repairs">Reparações</a>
+        <a href="#empresas" data-nav="business">Empresas &amp; Software</a>
+        <a href="#sobre" data-nav="about">Sobre Nós</a>
+        <a href="#contactos" data-nav="contact">Contactos</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#reparacoes" class="btn btn-primary btn-sm">Pedir Orçamento</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio" data-section="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-badge" id="heroBadge"></span>
+        <h1 class="hero-title" id="heroTitle"></h1>
+        <p class="hero-subtitle" id="heroSubtitle"></p>
+        <div class="hero-ctas">
+          <a id="heroPrimaryCta" href="#catalogo" class="btn btn-primary btn-lg"></a>
+          <a id="heroSecondaryCta" href="#reparacoes" class="btn btn-outline-light btn-lg"></a>
+        </div>
+        <div class="hero-stats" id="heroStats"></div>
+      </div>
+    </section>
+
+    <!-- 3 Pilares de Acesso Rápido -->
+    <section class="pillars-wrap" id="pilares" data-section="pillars">
+      <div class="container">
+        <div class="pillars-grid" id="pillarsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Catálogo / Loja -->
+    <section class="section" id="catalogo" data-section="catalog">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="catalogEyebrow"></span>
+          <h2 id="catalogTitle"></h2>
+          <p class="section-sub" id="catalogSubtitle"></p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="filter-pills" id="catalogFilters"></div>
+          <div class="search-box">
+            <input type="search" id="catalogSearch" placeholder="Pesquisar modelo, tinteiro, referência..." aria-label="Pesquisar no catálogo" />
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+      </div>
+    </section>
+
+    <!-- Assistência Técnica & Reparações -->
+    <section class="section section-alt" id="reparacoes" data-section="repairs">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="repairsEyebrow"></span>
+          <h2 id="repairsTitle"></h2>
+          <p class="section-sub" id="repairsSubtitle"></p>
+        </div>
+
+        <div class="repairs-layout">
+          <div class="repairs-grid" id="repairsGrid"></div>
+
+          <aside class="quote-card">
+            <div class="quote-card-head">
+              <span class="badge-cyan">Orçamento Rápido</span>
+              <h3>Pedir Orçamento de Reparação</h3>
+              <p>Indique os dados do equipamento e da avaria. Respondemos rapidamente por WhatsApp ou e-mail.</p>
+            </div>
+            <form id="repairForm" class="form-stack">
+              <div class="form-row-2">
+                <label>
+                  Tipo de Equipamento
+                  <select name="deviceType" required>
+                    <option value="Telemóvel / Smartphone">Telemóvel / Smartphone</option>
+                    <option value="Computador Portátil">Computador Portátil</option>
+                    <option value="PC Desktop / Gaming">PC Desktop / Gaming</option>
+                    <option value="Impressora / Periférico">Impressora / Periférico</option>
+                    <option value="Consola / Tablet">Consola / Tablet</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </label>
+                <label>
+                  Marca / Modelo
+                  <input type="text" name="model" placeholder="Ex: iPhone 13 / HP Pavilion" required />
+                </label>
+              </div>
+              <label>
+                Descrição da Avaria
+                <textarea name="issue" rows="3" placeholder="Ex: Ecrã partido, não carrega, portátil muito lento..." required></textarea>
+              </label>
+              <div class="form-row-2">
+                <label>
+                  O Seu Nome
+                  <input type="text" name="name" placeholder="Nome" required />
+                </label>
+                <label>
+                  Telefone / E-mail
+                  <input type="text" name="contact" placeholder="912 345 678" required />
+                </label>
+              </div>
+              <div class="quote-actions">
+                <button type="submit" data-channel="whatsapp" class="btn btn-whatsapp">💬 Enviar por WhatsApp</button>
+                <button type="button" id="repairEmailBtn" class="btn btn-outline">✉️ Enviar por E-mail</button>
+              </div>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Empresas & Software (Secção Escura Tecnológica) -->
+    <section class="section section-dark" id="empresas" data-section="business">
+      <div class="container">
+        <div class="business-header">
+          <div>
+            <span class="eyebrow eyebrow-light" id="businessEyebrow"></span>
+            <h2 id="businessTitle"></h2>
+            <p class="section-sub section-sub-light" id="businessSubtitle"></p>
+          </div>
+          <a id="businessCta" href="#contactos" class="btn btn-accent btn-lg"></a>
+        </div>
+        <div class="business-grid" id="businessGrid"></div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="section" id="galeria" data-section="gallery">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="galleryEyebrow"></span>
+          <h2 id="galleryTitle"></h2>
+          <p class="section-sub" id="gallerySubtitle"></p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="section section-alt" id="sobre" data-section="about">
+      <div class="container about-layout">
+        <div class="about-media">
+          <img id="aboutImage" src="assets/about-img.svg" alt="Sobre a Tecla - Informática" />
+        </div>
+        <div class="about-body">
+          <span class="eyebrow" id="aboutEyebrow"></span>
+          <h2 id="aboutTitle"></h2>
+          <div class="about-text" id="aboutDescription"></div>
+          <div class="values-grid" id="aboutValues"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipa -->
+    <section class="section" id="equipa" data-section="team">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="teamEyebrow"></span>
+          <h2 id="teamTitle"></h2>
+          <p class="section-sub" id="teamSubtitle"></p>
+        </div>
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section class="section section-alt" id="testemunhos" data-section="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="testimonialsEyebrow"></span>
+          <h2 id="testimonialsTitle"></h2>
+          <p class="section-sub" id="testimonialsSubtitle"></p>
+        </div>
+        <div class="testimonials-grid" id="testimonialsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Novidades -->
+    <section class="section" id="novidades" data-section="news">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="newsEyebrow"></span>
+          <h2 id="newsTitle"></h2>
+          <p class="section-sub" id="newsSubtitle"></p>
+        </div>
+        <div class="news-grid" id="newsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contactos & Mapa -->
+    <section class="section section-alt" id="contactos" data-section="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="contactEyebrow"></span>
+          <h2 id="contactTitle"></h2>
+          <p class="section-sub" id="contactSubtitle"></p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info-card">
+            <div class="contact-list" id="contactList"></div>
+            <div class="hours-box">
+              <h4>🕒 Horário de Funcionamento</h4>
+              <ul id="contactHours"></ul>
+            </div>
+            <div class="social-links" id="contactSocials"></div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3>Envie-nos uma Mensagem</h3>
+            <p class="muted">Para pedidos de demonstração do Software XD, orçamentos ou dúvidas gerais.</p>
+            <form id="contactForm" class="form-stack">
+              <div class="form-row-2">
+                <label>
+                  Nome
+                  <input type="text" name="name" placeholder="O seu nome" required />
+                </label>
+                <label>
+                  Telefone ou E-mail
+                  <input type="text" name="replyTo" placeholder="Contacto de resposta" required />
+                </label>
+              </div>
+              <label>
+                Assunto
+                <input type="text" name="subject" placeholder="Ex: Demonstração Software XD / Stock de produto" required />
+              </label>
+              <label>
+                Mensagem
+                <textarea name="message" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+              </label>
+              <div class="quote-actions">
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                <a id="contactMapBtn" href="#" target="_blank" rel="noopener" class="btn btn-outline">🗺️ Como Chegar</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="map-wrap" id="mapWrap"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img id="footerLogo" class="footer-logo" src="assets/logo-tecla.png" alt="Tecla - Informática" />
+        <strong id="footerBrandName">Tecla - Informática</strong>
+        <p id="footerText"></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#reparacoes">Reparações</a></li>
+          <li><a href="#empresas">Empresas &amp; Software</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informação Legal</h4>
+        <ul>
+          <li><a id="footerComplaintsLink" href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener">Livro de Reclamações Eletrónico</a></li>
+          <li><button type="button" class="link-btn" id="openPrivacyBtn">Política de Privacidade (RGPD)</button></li>
+          <li><button type="button" class="link-btn" id="openRalBtn">Resolução Alternativa de Litígios</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span id="footerCopyright"></span>
+      <a href="admin/index.html" class="admin-entry">⚙️ Área Reservada (Admin)</a>
+    </div>
+  </footer>
+
+  <!-- Barra fixa Mobile-First -->
+  <nav class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Ações rápidas">
+    <a id="mobCall" href="tel:+351253067976"><span>📞</span><small>Ligar</small></a>
+    <a id="mobWhatsapp" href="#" target="_blank" rel="noopener" class="mob-wa"><span>💬</span><small>WhatsApp</small></a>
+    <a id="mobMaps" href="#" target="_blank" rel="noopener"><span>📍</span><small>Como Chegar</small></a>
+  </nav>
+
+  <!-- Botão Flutuante WhatsApp (Desktop) -->
+  <a id="floatingWhatsapp" class="floating-wa hidden" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    💬 <span>WhatsApp</span>
+  </a>
+
+  <!-- Modal Lightbox / Artigo / Legal -->
+  <div class="modal-backdrop hidden" id="appModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/default-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
